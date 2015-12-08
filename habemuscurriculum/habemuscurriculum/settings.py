@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_markdown',
     'django',
     'home',
+    'formulario',
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -8,6 +8,3 @@ class LandingIndex(generic.ListView):
 	template_name = 'home/landing.html'
 
 	
-class PostDetail(generic.DetailView):
-	model = bmodels.Entry
-	template_name = 'blog/post.html'
