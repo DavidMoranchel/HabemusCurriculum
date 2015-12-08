@@ -22,6 +22,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^markdown/', include('django_markdown.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('home.urls', namespace = 'blog')),
+    url(r'^', include('home.urls', namespace = 'landing')),
 
 ]
