@@ -5,3 +5,4 @@ from home import models as bmodels
 
 class LandingIndex(generic.ListView):
 	pass
+

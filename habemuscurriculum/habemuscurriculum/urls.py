@@ -20,6 +20,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+
     # Python Social Auth URLs
     url('', include('social.apps.django_app.urls', namespace='social')),
     # Home URL
@@ -27,4 +28,3 @@ urlpatterns = [
     # Logout URL
     url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
 
-]
