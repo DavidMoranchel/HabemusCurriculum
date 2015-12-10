@@ -25,6 +25,8 @@ urlpatterns = [
     url('', include('social.apps.django_app.urls', namespace='social')),
     # Home URL
     url(r'^$', TemplateView.as_view(template_name="home/landing.html"), name="landing"),
+    url(r'^forma/$', TemplateView.as_view(template_name="formulario/base.html"), name="formulario"),
     # Logout URL
     url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
 
+]
