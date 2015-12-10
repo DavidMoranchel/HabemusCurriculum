@@ -1,7 +1,11 @@
-h1{
-	color:#3066BE;
+h2{
+	color:black;
 	width: 70%;
 	margin: 0 auto;
+	font-style: normal;
+	font-variant: normal;
+	font-family: Pacifico; cursive;
+	text-align: center;
 }
 .primerBloque{
 	height: 100%;
@@ -11,4 +15,28 @@ h1{
 }
 .mainMessage{
 	font-weight: 100;
+}
+
+
+article{
+	margin-top: 30px
+}
+
+h4{
+	text-align: center;
+	color: black;
+}
+
+h5{
+	color: black;
+	text-align: center;
+	font-family: Pacifico; cursive;
+}
+
+.container{
+	text-align: justify;
+}
+
+.espacio{
+	margin: 0 auto;
 }

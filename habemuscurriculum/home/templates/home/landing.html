@@ -1,8 +1,191 @@
 {% extends "home/index.html" %}
 {% load static from staticfiles %}
-{% block content %}
-<section class="primerBloque valign-wrapper">
-	<h1 class="valign mainMessage"><strong>Crea un curriculum de alto impácto en minuto</strong>s, demuestra lo grande que eres <a class="waves-effect waves-light btn btnBase"><i class="material-icons left ">note_add</i>Empezar ya</a>
-	 </h1>
-</section>
-{% endblock content %}
+
+{% block nav %}
+
+	<header>
+		<div class="container center">
+			
+			<nav class="white">
+			  <div class="nav-wrapper">
+			    <a href="#" class="brand-logo lefth"><h2>CuVitae</h2></a>
+			  </div>
+			</nav>	
+
+		</div>
+
+
+	</header>
+
+{% endblock nav %}
+	
+
+
+
+{% block section %}
+
+	<section>
+		<article>
+			
+			<div class="container center">
+		      <div class="col s12 m5">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h4>
+		          	
+		          </h4>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article>  
+
+		<article>
+			
+			<div class="container center">
+		      <div class="col s12 m5">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h4>
+		          	
+		          </h4>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article>  
+
+		<article>
+			
+			<div class="container center">
+		      <div class="col s12 m5">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h4>
+		          	
+		          </h4>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article>  
+
+		<article>
+			
+			<div class="container center">
+		      <div class="col s12 m5">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h4>
+		          	
+		          </h4>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article> 
+
+		<article>
+			
+			<div class="container center">
+		      <div class="col s12 m5">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h4>
+		          	
+		          </h4>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article>  
+
+		<article>
+			
+			<div class="row espacio">
+		      <div class="col s4 offset-s4">
+		        <div class="card-panel white">
+		          <span class="cyan-text">
+
+
+		          <h5>
+		          	Empieza tu C.V.
+		          </h5>
+		          
+
+		          </span>
+		        </div>
+		      </div>
+		    </div>
+
+		</article>  
+
+
+	</section>
+
+
+            
+	
+{% endblock section %}
+
+
+
+
+
+
+{% block Facebook %}
+
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '1069441553095558',
+	      xfbml      : true,
+	      version    : 'v2.5'
+	    });
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+
+	 {% if user and not user.is_anonymous %}
+		Welcome back {{ user.get_full_name }}.
+		 <a href="{% url 'user-logout' %}">Logout</a>
+		 {% else %}
+		 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+		 Enter with Facebook
+		 </a>
+ 	 {% endif %}
+
+{% endblock Facebook %}	

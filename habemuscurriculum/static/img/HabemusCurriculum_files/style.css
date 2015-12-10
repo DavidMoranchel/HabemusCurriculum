@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300|PT+Serif:700,400);
+*{
+	margin: 0;
+	font-family: 'Titillium Web', sans-serif;
+}
+body, html{
+	height: 100%;
+}
+/*
+font-family: 'Titillium Web', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+h1{
+	font: bold;
+}
+.baseColor{
+	background: #172A3A;
+}
+.focus{
+	background: #09BC8A;
+}
+.secColor{
+	background: #3066BE;
+}
+.darkerColor{
+	background: #004346;
+}
+.serif{
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	
+}
+
+img {
+       width: 1270px; 
+       height: 660px;
+
+}

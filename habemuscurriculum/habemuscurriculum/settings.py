@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django_markdown',
     'django',
     'home',
+    'formulario',
+     # Third-party apps
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -66,6 +69,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                 # Python Social Auth Context Processors
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -125,3 +131,17 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = ( 
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+
+AUTHENTICATION_BACKENDS = (
+    # Facebook
+    'social.backends.facebook.FacebookOAuth2',
+    # Django
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1069441553095558'
+SOCIAL_AUTH_FACEBOOK_SECRET = '5e3ef26722a94fccace22f1503dc9bd9'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"

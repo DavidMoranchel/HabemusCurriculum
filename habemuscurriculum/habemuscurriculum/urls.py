@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
-
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^markdown/', include('django_markdown.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('home.urls', namespace = 'landing')),
+    # Python Social Auth URLs
+    url('', include('social.apps.django_app.urls', namespace='social')),
+    # Home URL
+    url(r'^$', TemplateView.as_view(template_name="home/landing.html"), name="landing"),
+    # Logout URL
+    url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
 
 ]
