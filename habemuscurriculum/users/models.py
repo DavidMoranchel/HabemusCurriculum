@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+from django import forms
 from django.contrib.auth.models import User
 
 
@@ -25,14 +26,21 @@ class ExtendedUser(models.Model):
 
 
 class SkillUser(models.Model):
-	percentage= models.IntegerField(null=False)
+	experience= models.TextField()
 	skills = models.ForeignKey('Skill', null=False)
 	user = models.ForeignKey(ExtendedUser, null=False)
+	facebook = models.CharField(max_length=50, null=True)
+	twitter = models.CharField(max_length=50, null=True)
+	github = models.CharField(max_length=50, null=True)
+	email = models.CharField(max_length=50, null=True)
 
 	def __unicode__(self):
 		return self.user.user.username 
 
-
+class CommentForm(forms.Form):
+    name = forms.CharField()
+    url = forms.URLField()
+    comment = forms.CharField(widget=forms.Textarea)
 	
 
 
