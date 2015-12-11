@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'formulario',
      # Third-party apps
     'social.apps.django_app.default',
+    'users',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -145,3 +146,14 @@ AUTHENTICATION_BACKENDS = (
 SOCIAL_AUTH_FACEBOOK_KEY = '1069441553095558'
 SOCIAL_AUTH_FACEBOOK_SECRET = '5e3ef26722a94fccace22f1503dc9bd9'
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+  
+  'fields': 'email'
+}
+
+
+
+
+
+
+MEDIA_ROOT = 'media'
