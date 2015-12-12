@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	font-family: "Roboto", sans-serif !important;
+}
+html, body{
+	height: 100%;
+}
+.bodyBase{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#08d4f9+0,08f9eb+100 */
+	background: #08d4f9; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #08d4f9 0%, #08f9eb 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #08d4f9 0%,#08f9eb 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #08d4f9 0%,#08f9eb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08d4f9', endColorstr='#08f9eb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.navBg{
+	background: #353535;
+}
+.logo_gde{
+	float: left;
+	margin-left: 20px;
+}
+.mainMessage{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: center;
+}
+.mainMessage h2{
+	color: white;
+	font-weight: 300;
+	margin-bottom: 15px;
+	line-height: 1;
+}
+.heightSec{
+	height: 90%;
+}
+.btnSesion{
+	width: 39px;
+	height: 42px;
+}
+.grayBase{
+	background: #353535;
+	font-weight: 200;
+}
+.grayBase:hover{
+	background: #212121;;
+}
+.sesionSection{
+	width: 101px;
+	float: right;
+	text-align: center;
+	height: 72px;
+	position: relative;
+}
+header{
+	overflow: hidden;
+	height: 80px;
+}
+.btnSesion{
+	width: 40px;
+	height: 46px;
+	background: #0089EC;
+	display: block;
+	margin: 26px auto;
+	-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.8);
+	box-shadow: 0 0 8px rgba(0,0,0,0.8);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.btnFace{
+	background-image: url(../img/iconos/facebook.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 13px;
+}
+.msj{
+	position: absolute;
+	line-height: 1;
+	width: 100%;
+	top: 8px;
+	color: darkgrey;
+}
