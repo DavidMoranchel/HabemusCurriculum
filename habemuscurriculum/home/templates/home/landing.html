@@ -57,10 +57,13 @@
 	<section class="valign-wrapper heightSec">
 		<article class="mainMessage valign">
 			<h2><strong>Crea tu skill set</strong> <br>	 Demuestra tus habilidades de de manera simple</h2>
-			<div class="btn grayBase">CREAR CV +</div>
+			{% if user and not user.is_anonymous %}
+    			 <a href="" class="btn grayBase" >CREAR CV +</a>
+    			 {% else %}
+    			 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class="btn grayBase" >CREAR CV +</a>
+    	 	 {% endif %}
 		</article>
 	</section>            
-	
 {% endblock section %}
 
 
