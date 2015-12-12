@@ -82,3 +82,9 @@ header{
 	top: 8px;
 	color: darkgrey;
 }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+	 visibility: visible;
+	 position: relative;
+	 left: 0;
+}

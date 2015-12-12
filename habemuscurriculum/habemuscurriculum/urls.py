@@ -18,6 +18,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 
+from formulario.views import Get_skills
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -25,7 +26,7 @@ urlpatterns = [
     url('', include('social.apps.django_app.urls', namespace='social')),
     # Home URL
     url(r'^$', TemplateView.as_view(template_name="home/landing.html"), name="landing"),
-    url(r'^forma/$', TemplateView.as_view(template_name="formulario/base.html"), name="formulario"),
+    url(r'^forma/$', Get_skills.as_view(), name="formulario"),
     # Logout URL
     url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
     ]
