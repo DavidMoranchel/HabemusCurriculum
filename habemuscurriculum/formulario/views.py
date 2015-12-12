@@ -22,6 +22,7 @@ class Get_skills(View):
 		skills = request.POST.getlist('skills','')
 		facebook = request.POST.get('facebook','')
 		twitter = request.POST.get('twitter','')
+		name = request.POST.get('name','')
 		github = request.POST.get('github','')
 		email = request.POST.get('email','')
 		extended_user = ExtendedUser(
@@ -32,6 +33,7 @@ class Get_skills(View):
 				twitter=twitter,
 				github=github,
 				email=email, 
+				name=name,
 
 			)
 		extended_user.save()
@@ -39,5 +41,5 @@ class Get_skills(View):
 			skill = Skill.objects.get(pk = int(skill_id))
 			extended_user.skills.add(skill)
 
-		return redirect("/")
+		return redirect("/cuvitae/2")
 

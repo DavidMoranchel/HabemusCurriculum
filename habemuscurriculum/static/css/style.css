@@ -94,3 +94,10 @@ header{
 }
 
 
+.btnAzul{
+	background: #07F8EA;
+	color: black;
+	display: block;
+	margin: 15px auto;
+}
+

@@ -17,12 +17,13 @@ class Skill(models.Model):
 
 class ExtendedUser(models.Model):
 	user = models.OneToOneField(User)
-	message = models.TextField()
+	message = models.TextField(default='')
 	skills = models.ManyToManyField(Skill)
 	facebook = models.CharField(max_length=50, null=True)
 	twitter = models.CharField(max_length=50, null=True)
 	github = models.CharField(max_length=50, null=True)
 	email = models.CharField(max_length=50, null=True)
+	name = models.CharField(max_length=50, null=True)
 
 	def __unicode__(self):
 		return self.user.username 

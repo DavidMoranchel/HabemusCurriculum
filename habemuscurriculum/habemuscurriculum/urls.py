@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from formulario.views import Get_skills
+from users.views import UserView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -29,6 +30,7 @@ urlpatterns = [
     # Home URL
     url(r'^$', TemplateView.as_view(template_name="home/landing.html"), name="landing"),
     url(r'^forma/$', Get_skills.as_view(), name="formulario"),
+    url(r'^cuvitae/(?P<user>\w+)/$', UserView.as_view(), name="User"),
     # Logout URL
     url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -36,6 +36,7 @@
 						<form action="" method="POST">
 						{% csrf_token %}
 
+							Nombre: <input type="text" name="name">
 							Message: <textarea name="message" id="" cols="30" rows="10"></textarea>
 							Facebook<input type="url" name="facebook">
 							twitter<input type="url" name="twitter">
@@ -45,7 +46,7 @@
 							{% for skill in skills %}
 								<input type="checkbox" name="skills" value="{{skill.id}}">{{skill.name}}<br>
 							{% endfor %}
-							<input type="submit" value="Subelos!">
+							<input class="btn btnAzul" type="submit" value="Subelos!">
 						</form>
 						{% endblock %}
 
