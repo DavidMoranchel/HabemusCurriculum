@@ -34,9 +34,35 @@ h5{
 }
 
 .container{
-	text-align: justify;
+	text-align: Left;
 }
-
+.mensaje{
+	height: 100px;
+}
 .espacio{
 	margin: 0 auto;
+}
+
+.skillInput{
+	width: 120px;
+	display: inline-block;
+	margin: 10px 15px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #07F8EA;
+	padding: 10px 5px;
+	min-height: 107px;
+	vertical-align: top;
+	
+}
+.skilInput .label{
+	display: inline-block;
+	
+}
+.check{
+	display: block;
+	margin:  0 auto 5px auto;
 }

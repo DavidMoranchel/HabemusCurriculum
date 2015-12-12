@@ -37,16 +37,20 @@
 						{% csrf_token %}
 
 							Nombre: <input type="text" name="name">
-							Message: <textarea name="message" id="" cols="30" rows="10"></textarea>
-							Facebook<input type="url" name="facebook">
-							twitter<input type="url" name="twitter">
-							github<input type="url" name="github">
-							email<input type="email" name="email">
-
+							Lo que me hace unico: <textarea class="mensaje" name="message" id="" cols="30" rows="30"></textarea>
+							Facebook:<input type="url" name="facebook">
+							Twitter:<input type="url" name="twitter">
+							Github:<input type="url" name="github">
+							E-mail:<input type="email" name="email"><br>
+							Mis Skills: <br>
+						
 							{% for skill in skills %}
-								<input type="checkbox" name="skills" value="{{skill.id}}">{{skill.name}}<br>
+								<div class="skillInput">
+									<input type="checkbox" class="check" name="skills" value="{{skill.id}}"><img src="/media/{{skill.img}}" alt="">
+									<div class="label" for="{{skill.id}}">{{skill.name}}</div>
+								</div>
 							{% endfor %}
-							<input class="btn btnAzul" type="submit" value="Subelos!">
+							<input class="btn btnAzul" type="submit" value="Listo!">
 						</form>
 						{% endblock %}
 
@@ -64,20 +68,9 @@
 
 
 
-
-
-
-
 </body>
 </html>
 
-
-
-{{ extended_user.message }}			
-{{ extended_user.facebook }}					
-{% for skill in extended_user.skills.all %}
-{{skill.name}} 
-{% endfor %}
 
 
 
