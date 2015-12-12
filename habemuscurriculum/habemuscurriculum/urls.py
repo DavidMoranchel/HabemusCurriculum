@@ -17,6 +17,8 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 from formulario.views import Get_skills
 
@@ -29,5 +31,5 @@ urlpatterns = [
     url(r'^forma/$', Get_skills.as_view(), name="formulario"),
     # Logout URL
     url(r'^users/logout/$','django.contrib.auth.views.logout',{'next_page': '/'},name="user-logout"),
-    ]
+    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
