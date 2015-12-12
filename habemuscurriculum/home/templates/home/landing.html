@@ -8,7 +8,7 @@
 			
 			<nav class="navBg">
 			  <div class="nav-wrapper">
-			    <a href="#" class="brand-logo left"><img src="{% static "img/cuvitae_logo.png" %}" width="115" style="margin-top:7px" alt=""></a>
+			    <a href="#" class="brand-logo left"><img src="{% static "img/cuvitae_logo.png" %}" width="115" style="margin-top:7px; margin-left: 10px;" alt=""></a>
 			    <div class="sesionSection">
 			    		<script>
 			    		  window.fbAsyncInit = function() {
@@ -31,7 +31,7 @@
 
 			    		 {% if user and not user.is_anonymous %}
 			    			Bienvenido  {{ user.get_full_name }}.
-			    			 <a href="{% url 'user-logout' %}" class="btn_close">X</a>
+			    			 <a href="{% url 'user-logout' %}"  class="btn_close">X</a>
 			    			 {% else %}
 			    			 <p class="msj">Inicia Sesión</p>
 			    			 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class="btnSesion btnFace">
@@ -58,9 +58,9 @@
 		<article class="mainMessage valign">
 			<h2><strong>Crea tu skill set</strong> <br>	 Demuestra tus habilidades de de manera simple</h2>
 			{% if user and not user.is_anonymous %}
-    			 <a href="" class="btn grayBase" >CREAR CV +</a>
+    			 <a href="/forma" class="btn grayBase" >CREAR CV +</a>
     			 {% else %}
-    			 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" class="btn grayBase" >CREAR CV +</a>
+    			 <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}"  class="btn grayBase" >CREAR CV +</a>
     	 	 {% endif %}
 		</article>
 	</section>            
@@ -71,8 +71,8 @@
 
 
 
-{% block Facebook %}
+{% block skill %}
 
 	
 
-{% endblock Facebook %}	
+{% endblock skill %}	
