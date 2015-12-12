@@ -14,7 +14,7 @@ html, body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08d4f9', endColorstr='#08f9eb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .navBg{
-	background: #353535;
+	background: #363636;
 }
 .logo_gde{
 	float: left;
@@ -40,7 +40,7 @@ html, body{
 	height: 42px;
 }
 .grayBase{
-	background: #353535;
+	background: #363636;
 	font-weight: 200;
 }
 .grayBase:hover{
