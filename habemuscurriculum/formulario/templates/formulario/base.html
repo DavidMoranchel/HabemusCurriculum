@@ -27,7 +27,19 @@
       
 	</header>
 	{% block content %}
+	<form action="" method="POST">
+	{% csrf_token %}
+		Message: <textarea name="message" id="" cols="30" rows="10"></textarea>
+		facebook<input type="url" name="facebook">
+		twitter<input type="url" name="twitter">
+		github<input type="url" name="github">
+		email<input type="email" name="email">
 
+		{% for skill in skills %}
+			<input type="checkbox" name="skills" value="{{skill.id}}">{{skill.name}}<br>
+		{% endfor %}
+		<input type="submit" value="Subelos!">
+	</form>
 	{% endblock %}
 </body>
 </html>

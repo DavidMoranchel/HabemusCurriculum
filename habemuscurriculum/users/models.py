@@ -18,25 +18,14 @@ class Skill(models.Model):
 class ExtendedUser(models.Model):
 	user = models.OneToOneField(User)
 	message = models.TextField()
-	skills = models.ManyToManyField(Skill, through='SkillUser')
-
-	def __unicode__(self):
-		return self.user.username 
-
-
-class SkillUser(models.Model):
-	experience= models.TextField()
-	skills = models.ForeignKey('Skill', null=False)
-	user = models.ForeignKey(ExtendedUser, null=False)
+	skills = models.ManyToManyField(Skill)
 	facebook = models.CharField(max_length=50, null=True)
 	twitter = models.CharField(max_length=50, null=True)
 	github = models.CharField(max_length=50, null=True)
 	email = models.CharField(max_length=50, null=True)
 
-
-
-	
 	def __unicode__(self):
-		return self.user.user.username 
+		return self.user.username 
+
 
 
