@@ -140,14 +140,41 @@ STATICFILES_DIRS = (
 AUTHENTICATION_BACKENDS = (
     # Facebook
     'social.backends.facebook.FacebookOAuth2',
+    
+    # Twitter
+    'social.backends.twitter.TwitterOAuth',
+
+    # Github
+    'social.backends.github.GithubOAuth2',
+
     # Django
     'django.contrib.auth.backends.ModelBackend',
 )
 
 
+#Facebook
+
 SOCIAL_AUTH_FACEBOOK_KEY = '1069441553095558'
 SOCIAL_AUTH_FACEBOOK_SECRET = '5e3ef26722a94fccace22f1503dc9bd9'
+
+
+#Twitter
+
+SOCIAL_AUTH_TWITTER_KEY = 'Sh5FediLqwf8SyinD9q873u1A'
+SOCIAL_AUTH_TWITTER_SECRET = 'qK3fuOLgmrle7l2ZbH2xKbc9Y6SFxxWsHLhuseKUQTCjfOaILy'
+
+
+#Github
+
+SOCIAL_AUTH_GITHUB_KEY = '2c4d6eddc18f488f6e95'
+SOCIAL_AUTH_GITHUB_SECRET = '3fb895559a1336b1bfd3620dde044ccf7e68aefe'
+
+
+
+
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+
+
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
   
   'fields': 'email'

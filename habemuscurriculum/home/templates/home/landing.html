@@ -38,6 +38,7 @@
 			    			 
 			    			 </a>
 			    	 	 {% endif %}
+
 			    </div>
 			  </div>
 			</nav>	
@@ -56,6 +57,18 @@
 
 	<section class="valign-wrapper heightSec">
 		<article class="mainMessage valign">
+
+			<a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">
+			 Enter with Twitter
+	     	</a>
+
+
+			<a href="{% url 'social:begin' 'github' %}?next={{ request.path }}">
+			Enter with Github
+			</a>
+
+
+			
 			<h2><strong>Crea tu skill set</strong> <br>	 Demuestra tus habilidades de de manera simple</h2>
 			{% if user and not user.is_anonymous %}
     			 <a href="/forma" class="btn grayBase" >CREAR CV +</a>
